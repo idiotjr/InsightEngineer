@@ -101,6 +101,26 @@
 
     </android.support.v7.widget.CardView>
 
+    <android.support.v7.widget.CardView
+        android:id="@+id/exit"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        app:cardCornerRadius="0dp"
+        app:cardBackgroundColor="#212121"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/exit_app"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:textColor="#FFF"
+            android:textSize="50dp"
+            android:text="file_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </android.support.v7.widget.CardView>
+
     <TextView
         android:id="@+id/home"
         android:gravity="center"

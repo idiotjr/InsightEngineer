@@ -86,6 +86,12 @@ public class Login extends AppCompatActivity {
                 })
                 .addApi(Auth.GOOGLE_SIGN_IN_API, gso)
                 .build();
+        findViewById(R.id.skip_btn).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Login.this, Dashboard.class));
+            }
+        });
     }
 
     @Override
