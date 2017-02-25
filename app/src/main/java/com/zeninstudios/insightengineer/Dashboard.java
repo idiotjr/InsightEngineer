@@ -46,17 +46,10 @@ public class Dashboard extends AppCompatActivity {
     private ViewPager mViewPager;
     private TabsPagerAdapter mAdapter;
     public SharedPreferences mSharedPreferences;
-    private String[] audioList = {"sub01_chapter_1", "sub01_chapter_2", "sub01_chapter_3", "sub02_chapter_1", "sub02_chapter_2"
-            , "sub02_chapter_3", "sub03_chapter_1", "sub03_chapter_3", "sub03_chapter_3"};
+    private String[] audioList = {"sub01_chapter_1", "sub01_chapter_2", "sub01_chapter_3"};
     private String[] audioLinkList = {"https://firebasestorage.googleapis.com/v0/b/insight-engineer.appspot.com/o/sub01_chapter_1.mp3?alt=media&token=0bb47acb-1ee0-4981-8ac8-2ea660b0a556",
             "https://firebasestorage.googleapis.com/v0/b/insight-engineer.appspot.com/o/sub01_chapter_2.mp3?alt=media&token=32b40547-8f6d-4028-bd95-e0c75885f975",
-            "https://firebasestorage.googleapis.com/v0/b/insight-engineer.appspot.com/o/sub01_chapter_3.mp3?alt=media&token=11ac5c6a-ab7d-4ea7-bdb5-4d878a9055f6",
-            "https://firebasestorage.googleapis.com/v0/b/insight-engineer.appspot.com/o/sub02_chapter_1.mp3?alt=media&token=9b0f3e31-5e94-4bf0-8d49-a7ba0417404c",
-            "https://firebasestorage.googleapis.com/v0/b/insight-engineer.appspot.com/o/sub02_chapter_2.mp3?alt=media&token=00266149-f3fe-46ca-88d9-e3d82fb7b7ba",
-            "https://firebasestorage.googleapis.com/v0/b/insight-engineer.appspot.com/o/sub02_chapter_3.mp3?alt=media&token=faac9c37-fee0-4428-903f-cb9f16197df8",
-            "https://firebasestorage.googleapis.com/v0/b/insight-engineer.appspot.com/o/sub03_chapter_1.mp3?alt=media&token=b1518086-804d-4a2c-a7e4-255fcf5583a6",
-            "https://firebasestorage.googleapis.com/v0/b/insight-engineer.appspot.com/o/sub03_chapter_2.mp3?alt=media&token=fd76c1c5-0799-45cb-ae95-d5abca079420",
-            "https://firebasestorage.googleapis.com/v0/b/insight-engineer.appspot.com/o/sub03_chapter_3.mp3?alt=media&token=14db4d32-bc1b-4d88-9486-85ebd6b4a91f"};
+            "https://firebasestorage.googleapis.com/v0/b/insight-engineer.appspot.com/o/sub01_chapter_3.mp3?alt=media&token=11ac5c6a-ab7d-4ea7-bdb5-4d878a9055f6"};
 
     public  void isStoragePermissionGranted() {
         if (Build.VERSION.SDK_INT >= 23) {
