@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:id="@+id/root_layout"
+    android:background="#212121"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/sub_name"
+        android:gravity="center"
+        android:layout_centerInParent="true"
+        android:textColor="#FFF"
+        android:textSize="50dp"
+        android:text="SUB_ONE"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <fr.castorflex.android.verticalviewpager.VerticalViewPager
+        android:visibility="gone"
+        android:id="@+id/sub_one_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </fr.castorflex.android.verticalviewpager.VerticalViewPager>
+
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:background="#00f44336"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:id="@+id/sub_left_bot" />
+
+        <ImageView
+            android:background="#00f44336"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="200dp"
+            android:id="@+id/sub_right_bot" />
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "942953687106",
+    "firebase_url": "https://insight-engineer.firebaseio.com",
+    "project_id": "insight-engineer",
+    "storage_bucket": "insight-engineer.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:942953687106:android:0535b0b6962cad68",
+        "android_client_info": {
+          "package_name": "com.zeninstudios.insightengineer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "942953687106-icc8crth8spf1k5lldfjiu10q143tg83.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.zeninstudios.insightengineer",
+            "certificate_hash": "2837de97fce9984316ff84d9bbccac1f80c0b7ff"
+          }
+        },
+        {
+          "client_id": "942953687106-6k8em12lnv50jmc3u3hgo2e7cmqcrkk3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCa2izRP6etaYs_wz98uUd2RMms0jd8QfI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "942953687106-6k8em12lnv50jmc3u3hgo2e7cmqcrkk3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
