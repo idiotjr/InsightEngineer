@@ -3,6 +3,7 @@ package com.zeninstudios.insightengineer;
 import android.app.DownloadManager;
 import android.content.Context;
 import android.graphics.Color;
+import android.graphics.Typeface;
 import android.media.MediaPlayer;
 import android.media.MediaRecorder;
 import android.net.Uri;
@@ -77,7 +78,8 @@ public class HomePageFrag extends Fragment{
         mStorage = FirebaseStorage.getInstance().getReference();
         mDatabaseRef = FirebaseDatabase.getInstance().getReference();
         mp = new MediaPlayer();
-
+        Typeface custFont = Typeface.createFromAsset(getActivity().getAssets(), "fonts/AmaticSC-Bold.ttf");
+        ((TextView)rootView.findViewById(R.id.home)).setTypeface(custFont);
         Long tsLong = System.currentTimeMillis()/1000;
         final String ts = tsLong.toString();
         Log.v("Recording", "recording_"+ts);
@@ -198,7 +200,7 @@ public class HomePageFrag extends Fragment{
         rootView.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View view) {
-                textToSpeech.speak("Swipe Left or right to change subjects. tap on screen to load subject chapters. press the bottom right of screen anytime to return to home", TextToSpeech.QUEUE_FLUSH, null);
+                textToSpeech.speak("Swipe Left or right to change subjects. tap on screen to load subject chapters. press the bottom right of screen anytime to return to home. Tap on top right to record audio and upload. Tap on top left to play recorded audio", TextToSpeech.QUEUE_FLUSH, null);
                 longPress = true;
                 return false;
             }
@@ -211,7 +213,9 @@ public class HomePageFrag extends Fragment{
         if(i == j)
             i = 0;
         String fileName = file[i].getAbsolutePath();
+        Typeface custFont = Typeface.createFromAsset(getActivity().getAssets(), "fonts/AmaticSC-Bold.ttf");
         ((TextView)rootView.findViewById(R.id.file_name)).setText(Uri.parse(fileName).getLastPathSegment());
+        ((TextView)rootView.findViewById(R.id.file_name)).setTypeface(custFont);
         if(mp.isPlaying()){
             mp.stop();
             mp.reset();

@@ -1,5 +1,6 @@
 package com.zeninstudios.insightengineer;
 
+import android.graphics.Typeface;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Environment;
@@ -36,7 +37,9 @@ public class SubOnePageFrag extends Fragment{
                              Bundle savedInstanceState) {
 
         View rootView = inflater.inflate(R.layout.frag_sub, container, false);
+        Typeface custFont = Typeface.createFromAsset(getActivity().getAssets(), "fonts/AmaticSC-Bold.ttf");
         ((TextView)rootView.findViewById(R.id.sub_name)).setText("English");
+        ((TextView)rootView.findViewById(R.id.sub_name)).setTypeface(custFont);
         verticalViewPager = (VerticalViewPager) rootView.findViewById(R.id.sub_one_pager);
         verticalViewPager.setAdapter(new DummyAdapter(getFragmentManager()));
         final String path = Environment.getExternalStorageDirectory()+"/InsightEngineer/AudioLectures/";
@@ -179,7 +182,9 @@ public class SubOnePageFrag extends Fragment{
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
             View rootView = inflater.inflate(R.layout.chapter_layout, container, false);
+            Typeface custFont = Typeface.createFromAsset(getActivity().getAssets(), "fonts/AmaticSC-Bold.ttf");
             TextView textView = (TextView) rootView.findViewById(R.id.textview);
+            textView.setTypeface(custFont);
             textView.setText("Chapter "+Integer.toString(getArguments().getInt(ARG_SECTION_NUMBER)));
             ImageView goBack = (ImageView)rootView.findViewById(R.id.chap_left_bot);
             final String path = Environment.getExternalStorageDirectory()+"/InsightEngineer/AudioLectures/";

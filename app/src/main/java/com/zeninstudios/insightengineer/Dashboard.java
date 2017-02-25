@@ -11,6 +11,7 @@ import android.content.IntentFilter;
 import android.content.ServiceConnection;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
+import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Build;
@@ -86,6 +87,8 @@ public class Dashboard extends AppCompatActivity {
         mAdapter = (new TabsPagerAdapter(getSupportFragmentManager()));
 
         mSharedPreferences = getSharedPreferences("FUGENIZ_PREFERENCES", MODE_PRIVATE);
+
+        Typeface custFont = Typeface.createFromAsset(getAssets(), "fonts/AmaticSC-Bold.ttf");
 
         isStoragePermissionGranted();
         mViewPager.setAdapter(mAdapter);

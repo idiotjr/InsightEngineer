@@ -1,5 +1,6 @@
 package com.zeninstudios.insightengineer;
 
+import android.graphics.Typeface;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Environment;
@@ -38,6 +39,8 @@ public class SubThreePageFrag extends Fragment{
 
         View rootView = inflater.inflate(R.layout.frag_sub, container, false);
         ((TextView)rootView.findViewById(R.id.sub_name)).setText("Computer");
+        Typeface custFont = Typeface.createFromAsset(getActivity().getAssets(), "fonts/AmaticSC-Bold.ttf");
+        ((TextView)rootView.findViewById(R.id.sub_name)).setTypeface(custFont);
         verticalViewPager = (VerticalViewPager) rootView.findViewById(R.id.sub_one_pager);
         verticalViewPager.setVisibility(View.GONE);
 
